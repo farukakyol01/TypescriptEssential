@@ -64,3 +64,28 @@ const person3 = {
   
   move(1,"North"); // Okay
   //move(1,"Nurth"); // Error!
+
+
+  
+//type aliases/customtypes
+type degisen=string;
+const person8: {
+  name: degisen;
+  age: number;
+} = {
+  name: "Faruk",
+  age: 30,
+};
+
+console.log(person8.name);
+
+
+type User = { name: string; age: number };
+ 
+function greet(user: User) {
+  console.log('Hi, I am ' + user.name);
+}
+ 
+function isOlder(user: User, checkAge: number) {
+  return checkAge > user.age;
+}
