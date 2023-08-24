@@ -1,32 +1,13 @@
-var Deparment = /** @class */ (function () {
-    function Deparment(dId, dname) {
-        this.dId = dId;
-        this.dname = dname;
-        //private dId:string;
-        //private dname: string;
-        this.employees = [];
-        //this.dname = n;
+var Person = /** @class */ (function () {
+    function Person(n) {
+        this.age = 30;
+        this.name = n;
     }
-    Deparment.prototype.describe = function () {
-        console.log("Department : " + this.dname + ' DeparmentId : ' + this.dId);
-        console.log("Department (".concat(this.dId, "): ").concat(this.dname));
+    Person.prototype.greet = function (phrase) {
+        console.log(phrase + " " + this.name);
     };
-    Deparment.prototype.addEmployee = function (employee) {
-        this.employees.push(employee);
-    };
-    Deparment.prototype.printEmployeeInformation = function () {
-        console.log(this.employees.length);
-        console.log(this.employees);
-    };
-    return Deparment;
+    return Person;
 }());
-var accounting = new Deparment("14", "Accounting");
-accounting.describe();
-//console.log(accounting.dname);
-//accounting.dname='sssss';
-accounting.addEmployee("faruk");
-//console.log(accounting.dname);
-accounting.printEmployeeInformation();
-//accounting.employees[2] = "Ebru";
-///const accountCopy = { dname: "Dummy", describe: accounting.describe };
-//accountCopy.describe();
+var user1 = new Person("Faruk");
+user1.greet("Hi There - I am ");
+console.log(user1);
